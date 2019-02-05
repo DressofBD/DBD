@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="jQuery News Ticker is a lightweight, stylish, easy to use and flexible jQuery news ticker" />
+<title>jQuery News Ticker</title>
+</head>
+
+<body>
+
+<ul id="js-news" class="js-hidden">
+<li class="news-item">মার্কেটিং এর কষ্ট থেকে মুক্তি নিন ।</li>
+<li class="news-item">ঘরে আরামে বসেই মার্কেটিং করুন ।</li>
+<li class="news-item">স্বল্প সময়ে অধিক পরিমান পোশাক দেখুন ।</li>
+<li class="news-item">সেরা ডিজাইনটি নির্বাচন করুন ।</li>
+<li class="news-item">আমাদের অর্ডার করুন ।</li>
+</ul>
+
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.ticker.js" ></script>
+<script type="text/javascript">
+	$(function () {
+     // start the ticker 
+	$('#js-news').ticker();
+	
+	// hide the release history when the page loads
+	$('#release-wrapper').css('margin-top', '-' + ($('#release-wrapper').height() + 20) + 'px');
+
+	// show/hide the release history on click
+	$('a[href="#release-history"]').toggle(function () {	
+		$('#release-wrapper').animate({
+			marginTop: '0px'
+		}, 600, 'linear');
+	}, function () {
+		$('#release-wrapper').animate({
+			marginTop: '-' + ($('#release-wrapper').height() + 20) + 'px'
+		}, 600, 'linear');
+	});	
+	
+	$('#download a').mousedown(function () {
+		_gaq.push(['_trackEvent', 'download-button', 'clicked'])		
+	});
+});
+</script>
+
+
+<style type="text/css">
+	/* Ticker Styling */
+body{
+	margin: 0;
+	padding: 0
+}
+.ticker-wrapper.has-js {
+width: 380px;
+height: 32px;
+display: block;
+background-color: transparent;
+font-size: 16px;
+position: relative;
+left: 50%;
+margin-left: -140px;
+overflow: hidden;
+}
+.ticker {
+width: 310px;
+height: 23px;
+display: block;
+position: relative;
+overflow: hidden;
+background-color: transparent;
+}
+.ticker-title {
+color: #000;
+font-weight: bold;
+background-color: red;
+text-transform: uppercase;
+}
+.ticker-content {
+margin: 0px;
+position: absolute;
+color: #fff;
+background-color: transparent;
+overflow: hidden;
+}
+.ticker-content:focus {
+ none;
+}
+.ticker-content a {
+text-decoration: none;
+color: #1F527B;
+}
+.ticker-content a:hover {
+text-decoration: underline;
+color: #000;
+}
+.ticker-swipe {
+padding-top: 7px;
+position: absolute;
+top: 0px;
+background:url(img/bg-tile.png);
+display: block;
+width: 400px;
+height: 23px;
+color: red;
+}
+.ticker-swipe span {
+margin-left: 1px;
+background-color: #f8f0db;
+border-bottom: 1px solid #1F527B;
+height: 12px;
+width: 7px;
+display: block;
+}
+.ticker-controls {
+padding: 8px 0px 0px 0px;
+list-style-type: none;
+float: left;
+}
+.ticker-controls li {
+padding: 0px;
+margin-left: 5px;
+float: left;
+cursor: pointer;
+height: 16px;
+width: 16px;
+display: block;
+}
+.ticker-controls li.jnt-play-pause {
+background-image: url('../images/controls.png');
+background-position: 32px 16px;
+}
+.ticker-controls li.jnt-play-pause.over {
+background-position: 32px 32px;
+}
+.ticker-controls li.jnt-play-pause.down {
+background-position: 32px 0px;
+}
+.ticker-controls li.jnt-play-pause.paused {
+background-image: url('../images/controls.png');
+background-position: 48px 16px;
+}
+.ticker-controls li.jnt-play-pause.paused.over {
+background-position: 48px 32px;
+}
+.ticker-controls li.jnt-play-pause.paused.down {
+background-position: 48px 0px;
+}
+.ticker-controls li.jnt-prev {
+background-image: url('../images/controls.png');
+background-position: 0px 16px;
+}
+.ticker-controls li.jnt-prev.over {
+background-position: 0px 32px;
+}
+.ticker-controls li.jnt-prev.down {
+background-position: 0px 0px;
+}
+.ticker-controls li.jnt-next {
+background-image: url('../images/controls.png');
+background-position: 16px 16px;
+}
+.ticker-controls li.jnt-next.over {
+background-position: 16px 32px;
+}
+.ticker-controls li.jnt-next.down {
+background-position: 16px 0px;
+}
+.js-hidden {
+display: none;
+}
+.no-js-news {
+padding: 10px 0px 0px 45px;
+color: #F8F0DB;
+}
+.left .ticker-swipe {
+/*left: 80px;*/
+}
+.left .ticker-controls, .left .ticker-content, .left .ticker-title, .left .ticker {
+float: left;
+}
+.left .ticker-controls {
+padding-left: 6px;
+}
+.right .ticker-swipe {
+/*right: 80px;*/
+}
+.right .ticker-controls, .right .ticker-content, .right .ticker-title, .right .ticker {
+float: right;
+}
+.right .ticker-controls {
+padding-right: 6px;
+}
+
+</style>
+</body>
+</html>
