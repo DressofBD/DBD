@@ -180,11 +180,13 @@ body{
 }
 
 .logo{
-    width: 168px;
-    height: 97px;
-    top: -20px;
-    position: absolute;
-    padding: 16px;
+width: 50px;
+height: 55px;
+top: 10px;
+}
+.alogo{
+    margin-left: 37%;
+position: relative;
 }
 .logo-section{
     background-color: RGBA(124, 128, 195, 0.26);
@@ -223,14 +225,20 @@ body{
 .menu-section, .footer-section{
     background-color: RGBA(124, 128, 195, 0.26);
 }
+.menu-section a{
+    font-size: 15px;
+}
+
 .products-ad{
     padding: 50px 0px;
+    color: #fff;
 }
 .products-ad img{
-    max-width: 270px;
+    max-width: 200px;
 }
 .products-ad h4{
-    line-height: 34px;
+    font-size: 14px;
+    line-height: 25px;
     color: #fff;
 }
 .products-ad .row{
@@ -253,7 +261,7 @@ body{
 /*---link-1-area---*/
 
 .link-1-area{
-    padding: 30px 0;
+    padding: 5px 0 10px 0;
 }
 .link-1::before, .link-1::after, .link-1 a::before, .link-1 a::after {
 }
@@ -276,7 +284,7 @@ body{
     color: #000 !important;
     background: transparent;
     transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-    border: 1px solid #ccc;
+    border: 3px solid RGBA(47, 55, 189, 0.82);
     border-bottom: 0px;
 }
 a.link-1-hr:link::after, a.link-1-hr:visited::after {
@@ -311,10 +319,58 @@ a.link-1-hr{
 }
 a.link-1-hr:hover{
     background-color: transparent;
-    box-shadow: 0px 8px 11px #363636;
 }
 
 /*---/link-1-area---*/
+
+.drop-menu {
+background-color: RGBA(47, 55, 189, 0.82);
+padding-bottom: 5px;
+padding-top: 5px;
+width: 180px;
+padding-left: 3px;
+padding-right: 3px;
+}
+.drop-menu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu-section li:hover .drop-menu {
+    display: block;
+    position: absolute;
+    z-index: 999;
+}
+.menu-section .drop-menu {
+    display: none;
+}
+.dm1{}
+.dm2{}
+.drop-menu a {
+    transition: 0.5s;
+    padding: 10px 5px;
+    display: block;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.drop-menu a:hover {
+    color: white;
+    background: url(../img/bg-tile.png);
+    border: 1px solid #FFF;
+    border-radius: 20px;
+}
+
+.drop-menu:hover a.link-1-hr{background: red;}
+
+
+
+
+
+
+
+
+
+
 
 /*---link-3-area---*/
 .link-3-area{
@@ -492,8 +548,12 @@ a.link-1-hr:hover{
     -o-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
+    top: 0%;
+    bottom: auto;
+    height: 100%;
 }
-
+.link-1-hr:hover::before {
+}
 
 /*---/btn-17---*/
 
@@ -760,6 +820,8 @@ a.link-1-hr:hover{
             }
             #carousel div img {
                 border-right: 1px solid #4db9a6;
+                height: 260px;
+                padding: 0 2px;
             }
             #carousel div p {
                 display: none;
