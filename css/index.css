@@ -1,4 +1,5 @@
 
+
 html {
     color: #222;
     font-size: 1em;
@@ -180,9 +181,9 @@ body{
 }
 
 .logo{
-width: 50px;
-height: 55px;
-top: 10px;
+    top: 4px;
+    position: relative;
+    width: 60px;
 }
 .alogo{
     margin-left: 37%;
@@ -194,7 +195,7 @@ position: relative;
 }
 .top-contact{
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 11px;
     top: 25px;
     text-align: center;
@@ -209,7 +210,33 @@ position: relative;
     height: 510px;
     border: 0px;
 }
+em.dbdtitle {
+        font: 500 2em/1 Oswald,sans-serif;
+        letter-spacing: 0;
+        display: block;
+        background-size: 50px 50px;
+        background-color: rgba(119, 21, 0, 0.81);
+        background-image: -webkit-linear-gradient(-45deg,rgba(255,255,255,.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);
+        background-image: -moz-linear-gradient(-45deg,rgba(255,255,255,.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);
+        background-image: linear-gradient(135deg,rgba(255,255,255,.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 5s linear infinite;
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        }
 
+        @-webkit-keyframes aitf{
+            0%{background-position:0 50%}
+            100%{background-position:100% 50%}
+        }
+
+        .socialenterprise{text-align: center;}
+        .socialenterprise p{
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;}
 .top-img-section{
     background-repeat: repeat-x;
     height: 165px;
@@ -230,11 +257,12 @@ position: relative;
 }
 
 .products-ad{
-    padding: 50px 0px;
+    padding: 20px 0 0 0px;
     color: #fff;
 }
 .products-ad img{
-    max-width: 200px;
+    width: 230px;
+    height: 250px;
 }
 .products-ad h4{
     font-size: 14px;
@@ -253,9 +281,6 @@ position: relative;
 }
 .products-descp3{
     background-color: RGBA(97, 0, 111, 0.3);
-}
-.products-descp4{
-    background-color: RGBA(108, 111, 0, 0.3);
 }
 
 /*---link-1-area---*/
@@ -321,6 +346,15 @@ a.link-1-hr:hover{
     background-color: transparent;
 }
 
+
+    .active::before {
+    top: 0%;
+    bottom: auto;
+    height: 100%;
+    border: 3px solid RGBA(47, 55, 189, 0.82);
+    border-bottom: 0;
+}
+.link-1-area li{}
 /*---/link-1-area---*/
 
 .drop-menu {
@@ -358,6 +392,7 @@ padding-right: 3px;
     background: url(../img/bg-tile.png);
     border: 1px solid #FFF;
     border-radius: 20px;
+    letter-spacing: 1px;
 }
 
 .drop-menu:hover a.link-1-hr{background: red;}
@@ -541,18 +576,12 @@ padding-right: 3px;
     color: #fff;
 }
 
-
-    .active::before {
+.active2::before {
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -o-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
-    top: 0%;
-    bottom: auto;
-    height: 100%;
-}
-.link-1-hr:hover::before {
 }
 
 /*---/btn-17---*/
@@ -796,8 +825,12 @@ padding-right: 3px;
     color: #ff6c00;
 }
 
-
-
+.attention{
+    position: relative;
+}
+.footer-top-desp{
+    background: rgba(255, 0, 0, 0.2);
+}
 
 
 
