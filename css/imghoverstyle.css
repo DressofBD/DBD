@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 /* the important bits */
 span {
-  -webkit-perspective: 500px;
-          perspective: 500px;
+  -webkit-perspective: 450px;
+          perspective: 450px;
 }
 
 .info {
@@ -249,8 +249,8 @@ ul:after {
 span {
   position: relative;
   float: left;
-  width: 250px;
-  height: 250px;
+  width: 227px;
+  height: 227px;
   margin: 0.5px;
   padding: 0;
   list-style: none;
@@ -311,8 +311,8 @@ h1 {
 
 
 span a img{
-  width: 250px;
-  height:250px;
+  width: 227px;
+  height:227px;
 }
 
 .abnormal{
@@ -324,13 +324,13 @@ span a img{
 }
 
 .nml:hover .normal{
-  transition: 2s;
+  transition: .7s;
   opacity: 0;
 }
 .nml:hover .abnormal{
-  transition: 5s;
+  transition: 1s;
   opacity: 1;
-  top: -250px;
+  top: -227px;
   position: relative;
 }
 
