@@ -834,50 +834,6 @@ padding-right: 3px;
 
 
 
-/*** Sli8der */
-            #wrapper {
-                background-color: rgba(132, 251, 255, 0.16);
-                overflow: hidden;
-                padding: 20px 0px;
-                border-radius: 30%;
-                box-shadow: 0px 18px 16px -12px #0e0e0e;
-            }
-            #carousel {
-                height: 259px;
-            }
-            #carousel div {
-                height: 259px;
-                text-align: center;
-                float: left;
-                position: relative;
-            }
-            #carousel div img {
-                border-right: 1px solid #4db9a6;
-                height: 260px;
-                padding: 0 2px;
-            }
-            #carousel div p {
-                display: none;
-            }
-            #carousel div:hover p {
-                background-color: rgba(129, 129, 127, 0.35);
-                color: #fff;
-                font-style: italic;
-                font-size: 14px;
-                display: inline-block;
-                width: 100px;
-                padding: 4px 2px;
-                margin: 0 0 0 -50px;
-                position: absolute;
-                bottom: 50px;
-                left: 50%;
-                color: #000;
-                border-radius: 50px;
-            }
-
-
-
-
 
 
 
@@ -943,4 +899,117 @@ padding-right: 3px;
 }
 @media (max-width: 320px){
 
+}
+
+
+/*---For programming section---*/
+.offer{
+    z-index: -1;
+    color: rgb(6, 255, 0);
+    text-align: center;
+    background: url(../img/bg-tile.png);
+    padding: 30px;
+    border-radius: 100%;
+    position: fixed;
+  animation-iteration-count: infinite;
+ -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  -webkit-animation-name: offer-ani;
+  animation-name: offer-ani;
+}
+
+@-webkit-keyframes offer-ani {
+  from {
+    opacity: 1;
+    box-shadow: 2px 0px 29px 0px red;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 2px 0px 29px 0px rgb(6, 255, 0);
+  }
+}
+
+@keyframes offer-ani {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    box-shadow: 2px 0px 29px 0px red;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 2px 0px 29px 0px rgb(6, 255, 0);
+  }
+}
+@-webkit-keyframes offer-ani {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    box-shadow: 2px 0px 29px 0px red;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 2px 0px 29px 0px rgb(6, 255, 0);
+  }
+}
+
+/*View on Fiverr button*/
+
+.btn-14 {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    border: 0;
+    overflow: hidden;
+    background: green;
+    display: inline-block;
+    width: 300px;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 0px;
+    font-weight: normal;
+    padding: 20px 60px;
+    box-shadow: 2px 8px 29px 0px rgb(26, 26, 26);
+}
+.btn-14::before, .btn-14::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 55px;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 190px solid rgba(255,255,255,0.25);
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.btn-14::after {
+    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+}
+.fiverr-view-button{
+    
+    background: rgba(249, 0, 255, 0.13);
+}
+.fiverr-btn-center{
+    margin: 0 auto;
+    width: 300px;
+    padding: 100px 0;
 }
